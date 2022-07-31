@@ -2,7 +2,7 @@
 
 const request = require("request-promise");
 const EXTERNAL_API="https://tools.ecpe.nu.ac.th/network/api/student/"; // put url
-const accessToken="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC90b29scy5lY3BlLm51LmFjLnRoXC9uZXR3b3JrXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjU5MDkwNzQyLCJleHAiOjE2NTkwOTQzNDIsIm5iZiI6MTY1OTA5MDc0MiwianRpIjoiTGVyYXBWY2hwUW41ektjZCIsInN1YiI6NzksInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.HpTQMAliA46h-Q2xTF45IMyxQm9WagpTW5bkiaV2H4M"; // put access token
+const accessToken=""; // put access token
 const student = {
   student_id: '63364543',
   name: 'Peereeyut Nunti', // replace with your full name.
@@ -18,7 +18,7 @@ exports.findStudentbyId = function (student_id, cb) {
             method: "GET",
             uri: EXTERNAL_API+student_id,
             headers: {
-                Authorization: `Bearer ${accessToken}`
+                Authorization: 'Bearer ${accessToken}'
             }
         }).then((response) => {
             console.log('Sent');
@@ -37,6 +37,9 @@ exports.findStudentbyId = function (student_id, cb) {
         });
 }
 
+
+// exports.login = request: function(resource, options) {
+//   return $.ajax(options);
 exports.fakeStudentbyInfo = function (student_id, cb) {
 
   cb(student);
