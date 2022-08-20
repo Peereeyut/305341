@@ -5,3 +5,5 @@ node_modules/*
 config.js
 **/*.bak
 *.bak
+public/styles/*
+public/images/*
