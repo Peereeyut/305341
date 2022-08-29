@@ -1,6 +1,6 @@
 //utility.js
 
-const request = require("request-promise");
+const request =require("request-promise");
 const EXTERNAL_API="https://tools.ecpe.nu.ac.th/network/api/student/"; // put url
 const accessToken=""; // put access token
 const student = {
@@ -37,9 +37,6 @@ exports.findStudentbyId = function (student_id, cb) {
         });
 }
 
-
-// exports.login = request: function(resource, options) {
-//   return $.ajax(options);
 exports.fakeStudentbyInfo = function (student_id, cb) {
 
   cb(student);
